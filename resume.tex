@@ -1,0 +1,174 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\input{glyphtounicode}
+
+% font options
+\usepackage{newpxtext}
+\linespread{1.05}  % palladio needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}  % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
+
+% sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-6pt}]
+
+% ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% custom commands
+\newcommand{\cvitem}[1]{
+  \item\small{
+    {#1\vspace{-2pt}}
+  }
+}
+
+\newcommand{\cvheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\cvheadingstart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\cvheadingend}{\end{itemize}}
+\newcommand{\cvitemstart}{\begin{itemize}\justifying}
+\newcommand{\cvitemend}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\cvskill}[2]{
+  \textcolor{black}{\textbf{#1}}\hfill
+  \foreach \x in {1,...,5}{%
+    \space{\ifnumgreater{\x}{#2}{\color{black!80!white!20}}{\color{black}}\faSquare}}\par%
+  \vspace{-2pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\footnotesize$\bullet$}}$}
+
+\begin{document}
+
+% contact information
+\begin{center}
+  \textbf{\LARGE\scshape Prestin Bell} \\
+  \vspace{1pt}\small
+  \href{mailto:}{prestin97@gmail.com} 
+  $\ \ $
+  Phone: 559-589-3021 \\
+  $\ \ $
+  \href{https://github.com/PrestinB12}{https://github.com/PrestinB12} 
+  $\ \ $
+  \href{www.linkedin.com/in/prestin-b-061086199}{www.linkedin.com/in/prestin-b-061086199}
+\end{center}
+
+\section{Education}
+\cvheadingstart
+  \item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{Old Dominion University} & Norfolk, VA \\
+    Bachelor of Science in Computer Science & January 2020 – May 2025 \\
+  \end{tabular*}
+\cvheadingend
+
+
+
+
+\section{Professional Experience}
+\cvheadingstart
+
+\cvheading
+    {Aermor LLC}{Virginia Beach, VA}
+    {Software Developer Internship}{May 2024 - August 2024}
+  \cvitemstart
+    \cvitem{Developed and Deployed two internal-business applications. First one is for an Inventory application given requirements from finance department. Used for tax purposes and required use and generation of QR codes.}
+    \cvitem{Second project is for business development. Created for taking notes, setting reminders, setting meetings, message co-workers, and operate a calendar.}
+    \cvitem{Technologies used for the two applications are HTML/CSS, JavaScript, C\#, SQL, ASP.Net, and MS Office (Word, SharePoint, Excel, PowerBI, Alteryx, etc).}
+  \cvitemend
+  
+  \cvheading
+    {Self-Employed}{Virginia Beach, VA}
+    {IT Help-Desk}{March 2021 - Present}
+  \cvitemstart
+    \cvitem{On demand, helped those in immediate vicinity (house and neighborhood) with any computer and network issues.}
+    \cvitem{Built and maintain personal computer setup. Understanding how various parts work and their expected functions (GPUs, CPUs, RAM, etc).}
+  \cvitemend
+
+  \cvheading
+    {Old Dominion University}{Norfolk, VA}
+    {Computer Science Tutor}{January 2024 - Present}
+  \cvitemstart
+    \cvitem{Provided one-on-one and group tutoring sessions in C++, Java, Python, SQL, and HTML/CSS, helping students build strong foundations in software development and debugging techniques.}
+    \cvitem{Guided students through complex programming assignments and capstone projects, emphasizing clean code practices, algorithmic thinking, and effective problem-solving strategies.}
+  \cvitemend
+
+   \cvheading
+    {Target Corporation}{Virginia, VA}
+    {Electronics Representative}{December 2021 - May 2024}
+  \cvitemstart
+    \cvitem{Handled daily operations in a fast-paced retail environment, ensuring the electronics section is well stocked and organized.}
+    \cvitem{Acted as the primary point of contact for electronic issues and customer concerns, consistently resolving concerns about electronics quickly and professionally.}
+  \cvitemend
+\cvheadingend
+
+\section{Technical Skills}
+\begin{tabbing}
+\hspace{0.25cm} \= \textbf{Coding languages:} \= C++, Python, Java, JavaScript/TypeScript, C, C\#, SQL, HTML, CSS, and Haskell \\
+\> \textbf{Frameworks:} \= React, Vue.js/Node.js/Express, ASP.NET (and .Net Core) \\
+\> \textbf{DevOps \& Tools:} \= Git, GitHub Actions \& Pages, Docker, DevOps, Linux, VS Code, MS Visual Studio, Swagger \\
+\> \textbf{Databases \& Testing:} \= MS-SQL Server, MongoDB, Alteryx, PowerBI, Excel, PyTest, JUnit
+\end{tabbing}
+
+\section{Projects}
+\cvheadingstart
+\item
+\cvitemstart
+
+\cvitem{\textbf{Convolutional Neural Network} \hfill \textnormal{November 2024 – Present} \\
+CNN (Convolutional Neural Network) used for reading images that look the same from the naked eye and creates heat maps to generate on the images where they differ. Written in Python, using NumPy, PySparks, and tested in PyTest. Can learn overtime with more images.}
+
+\cvitem{\textbf{SoundMap for a Changing Landscape} \hfill \textnormal{May 2023 - December 2023} \\
+Senior CapStone project that is a website where users can upload images and sounds and place them at the location from the upload spot (think of the SnapChat SnapMap). Responible for creating the 'Welcome' and 'About' webpages and the 'Admin role' front end functionality. Written in JavaScript, HTML/CSS, MongoDB, and React 
+}
+
+\cvitem{\textbf{Website Parser} \hfill \textnormal{May 2023 - August 2023} \\
+Software Engineering Project. Created to parse and obtain features of a webpage. Such as the styles, scripts, tags, and images a webpage may contain, and display them for the user in the terminal. This project used Trello for workflow, Java, JUnit for unit testing, and technical writing for the system requirement(s) sheet. }
+
+
+\cvitemend
+\cvheadingend
+
+
+
+\end{document}
